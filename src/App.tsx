@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import IntroAnimation from '@/components/IntroAnimation';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import Home from "./pages/Home";
 import Education from "./pages/Education";
 import Experience from "./pages/Experience";
@@ -39,28 +40,22 @@ const AnimatedRoutes = () => {
 const AppContent = () => {
   const [showIntro, setShowIntro] = useState(true);
 
-  useEffect(() => {
-    // Check if intro has been shown in this session
-    const introShown = sessionStorage.getItem('introShown');
-    if (introShown) {
-      setShowIntro(false);
-    }
-  }, []);
-
   const handleIntroComplete = () => {
     setShowIntro(false);
-    sessionStorage.setItem('introShown', 'true');
   };
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       {showIntro && (
         <IntroAnimation onComplete={handleIntroComplete} name="John Doe" />
       )}
       <AnimatedBackground />
       <Navbar />
-      <AnimatedRoutes />
-    </>
+      <div className="flex-1">
+        <AnimatedRoutes />
+      </div>
+      <Footer />
+    </div>
   );
 };
 

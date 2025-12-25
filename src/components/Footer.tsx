@@ -42,17 +42,29 @@ const Footer = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col items-center gap-6">
+      <div className="container mx-auto px-4 py-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Copyright */}
+          <motion.p
+            className="text-sm text-muted-foreground"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            © {currentYear}{' '}
+            <span className="font-signature text-lg gradient-text">John Doe</span>
+            . All rights reserved.
+          </motion.p>
+
           {/* Social Media Icons */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={social.name}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-full border border-border/50 text-muted-foreground transition-all duration-300 ${social.color} ${social.bgColor}`}
+                className={`p-2 rounded-full border border-border/50 text-muted-foreground transition-all duration-300 ${social.color} ${social.bgColor}`}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{
@@ -69,32 +81,10 @@ const Footer = () => {
                 whileTap={{ scale: 0.9 }}
                 aria-label={social.name}
               >
-                <social.icon className="w-5 h-5" />
+                <social.icon className="w-4 h-4" />
               </motion.a>
             ))}
           </div>
-
-          {/* Copyright */}
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            <p className="text-sm text-muted-foreground">
-              © {currentYear}{' '}
-              <span className="font-signature text-lg gradient-text">John Doe</span>
-              . All rights reserved.
-            </p>
-            <motion.p
-              className="text-xs text-muted-foreground/60 mt-1"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.7 }}
-            >
-              Built with ❤️ and creativity
-            </motion.p>
-          </motion.div>
         </div>
       </div>
 

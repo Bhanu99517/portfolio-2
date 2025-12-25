@@ -107,15 +107,23 @@ const Projects = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.2 }}
                 >
-                  <AnimatedCard glowColor={project.color} className="h-full">
+                <AnimatedCard glowColor={project.color} className="h-full overflow-hidden">
                     <div className="space-y-4">
-                      <div className="flex items-start justify-between">
-                        <h4 className="text-xl font-bold text-foreground">{project.title}</h4>
-                        <div className="flex items-center gap-1 text-sm text-glow-gold">
+                      {/* Project Image */}
+                      <div className="relative -mx-6 -mt-6 mb-4 overflow-hidden">
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                        <div className="absolute bottom-3 left-4 flex items-center gap-1 text-sm text-glow-gold">
                           <Star className="w-4 h-4 fill-current" />
                           {project.stars}
                         </div>
                       </div>
+
+                      <h4 className="text-xl font-bold text-foreground">{project.title}</h4>
 
                       <p className="text-muted-foreground">{project.description}</p>
 
@@ -172,15 +180,23 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <AnimatedCard glowColor={project.color} className="h-full">
+              <AnimatedCard glowColor={project.color} className="h-full overflow-hidden">
                   <div className="space-y-3">
-                    <div className="flex items-start justify-between">
-                      <h4 className="text-lg font-bold text-foreground">{project.title}</h4>
-                      <div className="flex items-center gap-1 text-xs text-glow-gold">
+                    {/* Project Image */}
+                    <div className="relative -mx-6 -mt-6 mb-3 overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-32 object-cover transition-transform duration-500 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                      <div className="absolute bottom-2 left-3 flex items-center gap-1 text-xs text-glow-gold">
                         <Star className="w-3 h-3 fill-current" />
                         {project.stars}
                       </div>
                     </div>
+
+                    <h4 className="text-lg font-bold text-foreground">{project.title}</h4>
 
                     <p className="text-sm text-muted-foreground line-clamp-2">
                       {project.description}

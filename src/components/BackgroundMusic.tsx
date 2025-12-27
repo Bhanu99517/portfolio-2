@@ -43,7 +43,7 @@ const BackgroundMusic = () => {
       ref={audioRef}
       loop
       preload="auto"
-      src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3"
+      src="https://cdn.pixabay.com/download/audio/2023/07/06/audio_ba68db7f7d.mp3"
     />
   );
 };

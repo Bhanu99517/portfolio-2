@@ -9,6 +9,7 @@ import AnimatedBackground from '@/components/AnimatedBackground';
 import IntroAnimation from '@/components/IntroAnimation';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import BackgroundMusic from '@/components/BackgroundMusic';
 import Home from "./pages/Home";
 import Education from "./pages/Education";
 import Experience from "./pages/Experience";
@@ -49,6 +50,7 @@ const AppContent = () => {
       {showIntro && (
         <IntroAnimation onComplete={handleIntroComplete} name="John Doe" />
       )}
+      <BackgroundMusic />
       <AnimatedBackground />
       <Navbar />
       <div className="flex-1">

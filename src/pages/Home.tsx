@@ -37,7 +37,7 @@ const Home = () => {
               >
                 Hi, I'm{' '}
                 <span className="gradient-text font-signature text-6xl md:text-8xl">
-                  John Doe
+                  Bhanu Prakash
                 </span>
               </motion.h1>
 

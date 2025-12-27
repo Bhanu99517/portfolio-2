@@ -7,43 +7,33 @@ const BackgroundMusic = () => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    // Autoplay policies: most browsers only allow autoplay when muted.
-    audio.volume = 0.3;
-    audio.muted = true;
-
-    const playMuted = async () => {
+    // Set low volume for ambient feel
+    audio.volume = 0.15;
+    
+    // Try to play (may be blocked by browser autoplay policy)
+    const playAudio = async () => {
       try {
         await audio.play();
-      } catch {
-        // ignore; we'll retry on first interaction
+      } catch (error) {
+        // Autoplay blocked - wait for user interaction
+        const handleInteraction = async () => {
+          try {
+            await audio.play();
+            document.removeEventListener('click', handleInteraction);
+            document.removeEventListener('keydown', handleInteraction);
+          } catch (e) {
+            console.log('Audio playback failed');
+          }
+        };
+        
+        document.addEventListener('click', handleInteraction);
+        document.addEventListener('keydown', handleInteraction);
       }
     };
 
-    const enableSound = async () => {
-      if (!audioRef.current) return;
-      const a = audioRef.current;
-      a.muted = false;
-      a.volume = 0.3;
-      try {
-        await a.play();
-      } catch {
-        // If it still fails, there's likely a network/codecs issue.
-        console.log('Audio playback failed after interaction');
-      }
-    };
-
-    // Try autoplay (muted) immediately
-    playMuted();
-
-    // Unmute + ensure playback on first user interaction
-    document.addEventListener('pointerdown', enableSound, { once: true });
-    document.addEventListener('keydown', enableSound, { once: true });
-    document.addEventListener('touchstart', enableSound, { once: true });
+    playAudio();
 
     return () => {
-      document.removeEventListener('pointerdown', enableSound);
-      document.removeEventListener('keydown', enableSound);
-      document.removeEventListener('touchstart', enableSound);
       audio.pause();
     };
   }, []);
@@ -53,8 +43,7 @@ const BackgroundMusic = () => {
       ref={audioRef}
       loop
       preload="auto"
-      playsInline
-      src="https://assets.mixkit.co/music/preview/mixkit-dreaming-big-31.mp3"
+      src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3"
     />
   );
 };

@@ -288,12 +288,8 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <div className="gradient-border p-8 bg-card rounded-xl">
+          <div>
+            <div className="relative p-8 bg-card rounded-xl border-2 border-primary/30">
               <h3 className="text-2xl font-bold mb-6 text-foreground font-mono">
                 {'>'} Send_Message
               </h3>
@@ -427,7 +423,7 @@ const Contact = () => {
                 )}
               </AnimatePresence>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </PageWrapper>

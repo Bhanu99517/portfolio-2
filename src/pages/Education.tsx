@@ -3,7 +3,6 @@ import { GraduationCap, Calendar, MapPin, Award, Play } from 'lucide-react';
 import PageWrapper from '@/components/PageWrapper';
 import SectionTitle from '@/components/SectionTitle';
 
-
 const educationData = [
   {
     degree: "Master of Science in Computer Science",

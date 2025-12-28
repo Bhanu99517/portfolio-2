@@ -343,23 +343,7 @@ const Contact = () => {
                         />
                         {renderError('name')}
                       </div>
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-mono font-medium text-foreground">
-                          email<span className="text-primary">:</span>
-                        </label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="text"
-                          value={formData.email}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                          placeholder="your@email.com"
-                          disabled={status === 'transmitting'}
-                          className={getInputClassName('email')}
-                        />
-                        {renderError('email')}
-                      </div>
+                      <div></div>
                     </div>
 
                     <div className="space-y-2">

@@ -19,24 +19,25 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    label: "Whatsapp",
+    value: "+91 9347856661",
+    href: "tel:+",
     color: 'magenta' as const,
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Hyderabad,Telangana,India",
     href: "#",
     color: 'gold' as const,
   },
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com", username: "@johndoe" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", username: "in/johndoe" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com", username: "@johndoe" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Bhanu99517", username: "@Bhanu99517" },
+  { icon: Github, label: "GitHub", href: "https://github.com/BhanuTechLab", username: "@BhanuTechLab" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", username: "in/Bhanu" },
+  { icon: Twitter, label: "Twitter", href: "https://twitter.com", username: "@Bhanu" },
 ];
 
 const Contact = () => {
@@ -106,7 +107,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div className="pt-4">
-              <h3 className="text-lg font-semibold mb-4 text-foreground">Connect with me</h3>
+              <h3 className="text-lg font-semibold mb-4 text-foreground">Follow me in</h3>
               <div className="flex gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -172,7 +173,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Doe"
+                      placeholder="Full Name"
                       required
                       className="bg-background border-border focus:border-primary"
                     />
@@ -187,7 +188,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder="name@example.com"
                       required
                       className="bg-background border-border focus:border-primary"
                     />
@@ -203,7 +204,7 @@ const Contact = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Project Inquiry"
+                    placeholder="Title"
                     required
                     className="bg-background border-border focus:border-primary"
                   />

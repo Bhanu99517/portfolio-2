@@ -145,7 +145,7 @@ const Home = () => {
             <div className="relative">
               {/* Floating code blocks */}
               <motion.div
-                className="absolute -top-9 -left-8 p-4 rounded-xl bg-card border border-border font-code text-sm"
+                className="absolute -top-10 -left-8 p-4 rounded-xl bg-card border border-border font-code text-sm"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               >
@@ -156,7 +156,7 @@ const Home = () => {
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-6 -right-4 p-4 rounded-xl bg-card border border-border font-code text-sm"
+                className="absolute -bottom-8 -right-4 p-4 rounded-xl bg-card border border-border font-code text-sm"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
               >

@@ -41,21 +41,19 @@ const socialLinks = [
 
 interface FormErrors {
   name?: string;
-  email?: string;
+  place?: string;
   subject?: string;
   message?: string;
 }
 
 interface FormData {
   name: string;
-  email: string;
+  place: string;
   subject: string;
   message: string;
 }
 
 type FormStatus = 'idle' | 'transmitting' | 'success';
-
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const validateField = (name: keyof FormData, value: string): string | undefined => {
   const trimmedValue = value.trim();
@@ -66,10 +64,10 @@ const validateField = (name: keyof FormData, value: string): string | undefined 
       if (trimmedValue.length < 3) return 'Name must be at least 3 characters';
       if (trimmedValue.length > 100) return 'Name must be less than 100 characters';
       return undefined;
-    case 'email':
-      if (!trimmedValue) return 'Email is required';
-      if (!emailRegex.test(trimmedValue)) return 'Invalid email format';
-      if (trimmedValue.length > 255) return 'Email must be less than 255 characters';
+    case 'place':
+      if (!trimmedValue) return 'Place is required';
+      if (trimmedValue.length < 2) return 'Place must be at least 2 characters';
+      if (trimmedValue.length > 100) return 'Place must be less than 100 characters';
       return undefined;
     case 'subject':
       if (!trimmedValue) return 'Subject is required';
@@ -89,14 +87,14 @@ const validateField = (name: keyof FormData, value: string): string | undefined 
 const Contact = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
-    email: '',
+    place: '',
     subject: '',
     message: '',
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Record<keyof FormData, boolean>>({
     name: false,
-    email: false,
+    place: false,
     subject: false,
     message: false,
   });
@@ -122,7 +120,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Mark all fields as touched
-    setTouched({ name: true, email: true, subject: true, message: true });
+    setTouched({ name: true, place: true, subject: true, message: true });
     
     if (!validateForm()) return;
 
@@ -134,7 +132,7 @@ const Contact = () => {
     // Build mailto link with encoded parameters
     const mailtoSubject = encodeURIComponent(formData.subject.trim());
     const mailtoBody = encodeURIComponent(
-      `Name: ${formData.name.trim()}\nEmail: ${formData.email.trim()}\n\nMessage:\n${formData.message.trim()}`
+      `Name: ${formData.name.trim()}\nPlace: ${formData.place.trim()}\n\nMessage:\n${formData.message.trim()}`
     );
     const mailtoLink = `mailto:bhanu99517@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
 
@@ -145,8 +143,8 @@ const Contact = () => {
 
     // Reset form after success display
     setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setTouched({ name: false, email: false, subject: false, message: false });
+      setFormData({ name: '', place: '', subject: '', message: '' });
+      setTouched({ name: false, place: false, subject: false, message: false });
       setErrors({});
       setStatus('idle');
     }, 3000);
@@ -344,21 +342,21 @@ const Contact = () => {
                         {renderError('name')}
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-mono font-medium text-foreground">
-                          email<span className="text-primary">:</span>
+                        <label htmlFor="place" className="text-sm font-mono font-medium text-foreground">
+                          place<span className="text-primary">:</span>
                         </label>
                         <Input
-                          id="email"
-                          name="email"
+                          id="place"
+                          name="place"
                           type="text"
-                          value={formData.email}
+                          value={formData.place}
                           onChange={handleChange}
                           onBlur={handleBlur}
-                          placeholder="your@email.com"
+                          placeholder="Your location"
                           disabled={status === 'transmitting'}
-                          className={getInputClassName('email')}
+                          className={getInputClassName('place')}
                         />
-                        {renderError('email')}
+                        {renderError('place')}
                       </div>
                     </div>
 

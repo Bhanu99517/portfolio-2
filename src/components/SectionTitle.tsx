@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
 
+
 interface SectionTitleProps {
   icon?: LucideIcon;
   title: string;

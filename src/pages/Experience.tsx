@@ -4,6 +4,7 @@ import PageWrapper from '@/components/PageWrapper';
 import SectionTitle from '@/components/SectionTitle';
 import AnimatedCard from '@/components/AnimatedCard';
 
+
 const experienceData = [
   {
     role: "Senior Full Stack Developer",

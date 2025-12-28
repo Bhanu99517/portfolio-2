@@ -3,32 +3,39 @@ import { Github, Linkedin, Instagram, Twitter } from 'lucide-react';
 
 const socialLinks = [
   {
+    name: 'GitHub',
+    icon: Github,
+    url: 'https://github.com/Bhanu99517',
+    color: 'hover:text-[#6e5494]',
+    bgColor: 'hover:bg-[#6e5494]/20',
+  },
+  {
+    name: 'GitHub',
+    icon: Github,
+    url: 'https://github.com/BhanuTechLab',
+    color: 'hover:text-[#6e5494]',
+    bgColor: 'hover:bg-[#6e5494]/20',
+  },
+  {
     name: 'LinkedIn',
     icon: Linkedin,
-    url: 'https://linkedin.com/in/yourprofile',
+    url: 'https://linkedin.com/in/bhanu99517',
     color: 'hover:text-[#0A66C2]',
     bgColor: 'hover:bg-[#0A66C2]/20',
   },
   {
     name: 'Instagram',
     icon: Instagram,
-    url: 'https://instagram.com/yourprofile',
+    url: 'https://instagram.com/_g_bhanu_prakash_',
     color: 'hover:text-[#E4405F]',
     bgColor: 'hover:bg-[#E4405F]/20',
   },
   {
     name: 'X',
     icon: Twitter,
-    url: 'https://x.com/yourprofile',
+    url: 'https://x.com/bhanu99517',
     color: 'hover:text-foreground',
     bgColor: 'hover:bg-foreground/20',
-  },
-  {
-    name: 'GitHub',
-    icon: Github,
-    url: 'https://github.com/yourprofile',
-    color: 'hover:text-[#6e5494]',
-    bgColor: 'hover:bg-[#6e5494]/20',
   },
 ];
 

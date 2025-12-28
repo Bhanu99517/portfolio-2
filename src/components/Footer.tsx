@@ -52,7 +52,7 @@ const Footer = () => {
             transition={{ delay: 0.3 }}
           >
             © {currentYear}{' '}
-            <span className="font-signature text-lg gradient-text">John Doe</span>
+            <span className="font-signature text-lg gradient-text">BhanuPrakash</span>
             . All rights reserved.
           </motion.p>
 

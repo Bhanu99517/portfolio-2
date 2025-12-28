@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code2 } from 'lucide-react';
 
+
 interface IntroAnimationProps {
   onComplete: () => void;
   name: string;

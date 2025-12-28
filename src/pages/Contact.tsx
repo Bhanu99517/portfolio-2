@@ -18,24 +18,25 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    label: "Whatsapp",
+    value: "+91 9347856661",
+    href: "tel:+",
     color: 'magenta' as const,
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Hyderabad, Telangana, India",
     href: "#",
     color: 'gold' as const,
   },
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com", username: "@johndoe" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com", username: "in/johndoe" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com", username: "@johndoe" },
+  { icon: Github, label: "GitHub", href: "https://github.com/BhanuTechLab", username: "@BhanuTechLabe" },
+  { icon: Github, label: "GitHub", href: "https://github.com/Bhanu99517", username: "@Bhanu99517" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/Bhanu99517", username: "in/Bhanu" },
+  { icon: Twitter, label: "Twitter", href: "https://twitter.com/Bhanu99517", username: "@Bhanu" },
 ];
 
 interface FormErrors {

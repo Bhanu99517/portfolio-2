@@ -5,6 +5,7 @@ import SectionTitle from '@/components/SectionTitle';
 import AnimatedCard from '@/components/AnimatedCard';
 import { Button } from '@/components/ui/button';
 
+
 const contributions = [
   {
     repo: "facebook/react",

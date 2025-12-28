@@ -9,7 +9,7 @@ const educationData = [
     school: "Indian Institute of Technology (IIT)",
     location: "Hyderabad, Telangana, India",
     period: "2028 - 2030",
-    gpa: "9.5/10.0",
+    gpa: "9.2/10.0",
     highlights: [
       "Specialized in Artificial Intelligence & ML",
       "Published research paper on Deep Learning",

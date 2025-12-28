@@ -370,7 +370,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        placeholder="Project Inquiry"
+                        placeholder="what's this about "
                         disabled={status === 'transmitting'}
                         className={getInputClassName('subject')}
                       />
@@ -387,7 +387,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        placeholder="Tell me about your project..."
+                        placeholder="your message..."
                         rows={5}
                         disabled={status === 'transmitting'}
                         className={`${getInputClassName('message')} resize-none`}

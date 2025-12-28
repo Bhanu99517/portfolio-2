@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Code2, Menu, X } from 'lucide-react';
 
+
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/education', label: 'Education' },

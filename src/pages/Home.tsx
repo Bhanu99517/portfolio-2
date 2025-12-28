@@ -152,7 +152,7 @@ const Home = () => {
                 <span className="text-glow-magenta">const</span>{' '}
                 <span className="text-glow-cyan">developer</span>{' '}
                 <span className="text-muted-foreground">=</span>{' '}
-                <span className="text-glow-gold">"creative"</span>;
+                <span className="text-glow-gold">"Bhanu"</span>;
               </motion.div>
 
               <motion.div

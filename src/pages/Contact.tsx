@@ -292,7 +292,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <AnimatedCard className="p-8">
+            <div className="gradient-border p-8 bg-card rounded-xl">
               <h3 className="text-2xl font-bold mb-6 text-foreground font-mono">
                 {'>'} Send_Message
               </h3>
@@ -425,7 +425,7 @@ const Contact = () => {
                   </motion.form>
                 )}
               </AnimatePresence>
-            </AnimatedCard>
+            </div>
           </motion.div>
         </div>
       </div>

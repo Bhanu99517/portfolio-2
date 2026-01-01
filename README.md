@@ -34,7 +34,7 @@ Designed for developers, cybersecurity students, and tech professionals who want
 ├── tailwind.config.ts       # Tailwind configuration
 ├── vite.config.ts           # Vite configuration
 └── README.md                # Documentation
-
+```
 ---
 
 ### ✨ Key Features

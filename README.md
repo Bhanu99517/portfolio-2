@@ -35,10 +35,6 @@ Designed for developers, cybersecurity students, and tech professionals who want
 ├── vite.config.ts           # Vite configuration
 └── README.md                # Documentation
 
-
-
-
-
 ---
 
 ### ✨ Key Features

@@ -37,11 +37,11 @@ Designed for developers, cybersecurity students, and tech professionals who want
 ```
 ---
 
-### ✨ Key Features
+## ✨ Key Features
 
 ---
 
-## 🎨 UI & UX
+### 🎨 UI & UX
 Modern and minimal design
 Fully responsive (mobile, tablet, desktop)
 Smooth animations and transitions
@@ -49,7 +49,7 @@ Light/Dark mode support
 
 ---
 
-## 🧑‍💻 Portfolio Sections
+### 🧑‍💻 Portfolio Sections
 About Me
 Skills & Tech Stack
 Projects with live/demo links
@@ -58,14 +58,14 @@ Contact section
 
 ---
 
-## ⚡ Performance
+### ⚡ Performance
 Built with Vite for fast builds
 Optimized assets and clean code
 SEO-friendly structure 
 
 ---
 
-## 🧰 Tech Stack
+### 🧰 Tech Stack
 React
 TypeScript
 Vite
@@ -75,7 +75,7 @@ Vercel (Deployment)
 
 ---
 
-## 🚀 Getting Started
+### 🚀 Getting Started
 Prerequisites
 Node.js (v18 or higher)
 npm or yarn
